@@ -1,9 +1,13 @@
-# api documentation for  [archy (v1.0.0)](https://github.com/substack/node-archy)  [![npm package](https://img.shields.io/npm/v/npmdoc-archy.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-archy) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-archy.svg)](https://travis-ci.org/npmdoc/node-npmdoc-archy)
+# npmdoc-archy
+
+api documentation for  [archy (v1.0.0)](https://github.com/substack/node-archy)  [![npm package](https://img.shields.io/npm/v/npmdoc-archy.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-archy) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-archy.svg)](https://travis-ci.org/npmdoc/node-npmdoc-archy)
 #### render nested hierarchies `npm ls` style with unicode pipes
 
-[![NPM](https://nodei.co/npm/archy.png?downloads=true)](https://www.npmjs.com/package/archy)
+[![NPM](https://nodei.co/npm/archy.png?downloads=true&downloadRank=true&stars=true)](https://www.npmjs.com/package/archy)
 
-[![apidoc](https://npmdoc.github.io/node-npmdoc-archy/build/screenCapture.buildNpmdoc.browser._2Fhome_2Ftravis_2Fbuild_2Fnpmdoc_2Fnode-npmdoc-archy_2Ftmp_2Fbuild_2Fapidoc.html.png)](https://npmdoc.github.io/node-npmdoc-archy/build/apidoc.html)
+- [https://npmdoc.github.io/node-npmdoc-archy/build/apidoc.html](https://npmdoc.github.io/node-npmdoc-archy/build/apidoc.html)
+
+[![apidoc](https://npmdoc.github.io/node-npmdoc-archy/build/screenCapture.buildCi.browser.%252Ftmp%252Fbuild%252Fapidoc.html.png)](https://npmdoc.github.io/node-npmdoc-archy/build/apidoc.html)
 
 ![npmPackageListing](https://npmdoc.github.io/node-npmdoc-archy/build/screenCapture.npmPackageListing.svg)
 
@@ -18,7 +22,6 @@
 {
     "author": {
         "name": "James Halliday",
-        "email": "mail@substack.net",
         "url": "http://substack.net"
     },
     "bugs": {
@@ -48,13 +51,11 @@
     "main": "index.js",
     "maintainers": [
         {
-            "name": "substack",
-            "email": "mail@substack.net"
+            "name": "substack"
         }
     ],
     "name": "archy",
     "optionalDependencies": {},
-    "readme": "ERROR: No README data found!",
     "repository": {
         "type": "git",
         "url": "git+ssh://git@github.com/substack/node-archy.git"
@@ -89,16 +90,6 @@
     "version": "1.0.0"
 }
 ```
-
-
-
-# <a name="apidoc.tableOfContents"></a>[table of contents](#apidoc.tableOfContents)
-
-#### [module archy](#apidoc.module.archy)
-
-
-
-# <a name="apidoc.module.archy"></a>[module archy](#apidoc.module.archy)
 
 
 
