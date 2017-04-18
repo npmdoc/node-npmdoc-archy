@@ -1,4 +1,4 @@
-<div class="apidocDiv">
+<html><head></head><body><div class="apidocDiv">
 <style>
 /*csslint
 */
@@ -47,17 +47,10 @@
 }
 </style>
 <h1>api documentation for
-    <a
-
-        href="https://github.com/substack/node-archy"
-
-    >archy (v1.0.0)</a>
+    <a href="https://github.com/substack/node-archy">archy (v1.0.0)</a>
 </h1>
 <h4>render nested hierarchies `npm ls` style with unicode pipes</h4>
-<div class="apidocSectionDiv"><a
-    href="#apidoc.tableOfContents"
-    id="apidoc.tableOfContents"
-><h1>table of contents</h1></a><ol>
+<div class="apidocSectionDiv"><a href="#apidoc.tableOfContents" id="apidoc.tableOfContents"><h1>table of contents</h1></a><ol>
 
     <li class="apidocModuleLi"><a href="#apidoc.module.archy">module archy</a><ol>
 
@@ -108,38 +101,38 @@
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">function archy(obj, prefix, opts) {
-    if (prefix === undefined) prefix = &#x27;&#x27;;
+    if (prefix === undefined) prefix = '';
     if (!opts) opts = {};
     var chr = function (s) {
         var chars = {
-            &#x27;│&#x27; : &#x27;|&#x27;,
-            &#x27;└&#x27; : &#x27;`&#x27;,
-            &#x27;├&#x27; : &#x27;+&#x27;,
-            &#x27;─&#x27; : &#x27;-&#x27;,
-            &#x27;┬&#x27; : &#x27;-&#x27;
+            'â”‚' : '|',
+            'â””' : '`',
+            'â”œ' : '+',
+            'â”€' : '-',
+            'â”¬' : '-'
         };
         return opts.unicode === false ? chars[s] : s;
     };
 
-    if (typeof obj === &#x27;string&#x27;) obj = { label : obj };
+    if (typeof obj === 'string') obj = { label : obj };
 
     var nodes = obj.nodes || [];
-    var lines = (obj.label || &#x27;&#x27;).split(&#x27;\n&#x27;);
-    var splitter = &#x27;\n&#x27; + prefix + (nodes.length ? chr(&#x27;│&#x27;) : &#x27; &#x27;) + &#x27; &#x27;;
+    var lines = (obj.label || '').split('\n');
+    var splitter = '\n' + prefix + (nodes.length ? chr('â”‚') : ' ') + ' ';
 
     return prefix
-        + lines.join(splitter) + &#x27;\n&#x27;
+        + lines.join(splitter) + '\n'
         + nodes.map(function (node, ix) {
             var last = ix === nodes.length - 1;
-            var more = node.nodes &#x26;&#x26; node.nodes.length;
-            var prefix_ = prefix + (last ? &#x27; &#x27; : chr(&#x27;│&#x27;)) + &#x27; &#x27;;
+            var more = node.nodes &amp;&amp; node.nodes.length;
+            var prefix_ = prefix + (last ? ' ' : chr('â”‚')) + ' ';
 
             return prefix
-                + (last ? chr(&#x27;└&#x27;) : chr(&#x27;├&#x27;)) + chr(&#x27;─&#x27;)
-                + (more ? chr(&#x27;┬&#x27;) : chr(&#x27;─&#x27;)) + &#x27; &#x27;
+                + (last ? chr('â””') : chr('â”œ')) + chr('â”€')
+                + (more ? chr('â”¬') : chr('â”€')) + ' '
                 + archy(node, prefix_, opts).slice(prefix.length + 2)
             ;
-        }).join(&#x27;&#x27;)
+        }).join('')
     ;
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
@@ -187,3 +180,4 @@
     ]
 </div>
 </div>
+</body></html>

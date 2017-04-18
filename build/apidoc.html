@@ -61,12 +61,123 @@
 
     <li class="apidocModuleLi"><a href="#apidoc.module.archy">module archy</a><ol>
 
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.archy.archy">
+            function <span class="apidocSignatureSpan"></span>archy
+            <span class="apidocSignatureSpan">(obj, prefix, opts)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.archy.toString">
+            function <span class="apidocSignatureSpan">archy.</span>toString
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.archy.toString">module archy.toString</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.archy.toString.toString">
+            function <span class="apidocSignatureSpan">archy.</span>toString
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
     </ol></li>
 
 </ol></div>
 
 <div class="apidocSectionDiv">
 <h1><a href="#apidoc.module.archy" id="apidoc.module.archy">module archy</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.archy.archy" id="apidoc.element.archy.archy">
+        function <span class="apidocSignatureSpan"></span>archy
+        <span class="apidocSignatureSpan">(obj, prefix, opts)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function archy(obj, prefix, opts) {
+    if (prefix === undefined) prefix = &#x27;&#x27;;
+    if (!opts) opts = {};
+    var chr = function (s) {
+        var chars = {
+            &#x27;│&#x27; : &#x27;|&#x27;,
+            &#x27;└&#x27; : &#x27;`&#x27;,
+            &#x27;├&#x27; : &#x27;+&#x27;,
+            &#x27;─&#x27; : &#x27;-&#x27;,
+            &#x27;┬&#x27; : &#x27;-&#x27;
+        };
+        return opts.unicode === false ? chars[s] : s;
+    };
+
+    if (typeof obj === &#x27;string&#x27;) obj = { label : obj };
+
+    var nodes = obj.nodes || [];
+    var lines = (obj.label || &#x27;&#x27;).split(&#x27;\n&#x27;);
+    var splitter = &#x27;\n&#x27; + prefix + (nodes.length ? chr(&#x27;│&#x27;) : &#x27; &#x27;) + &#x27; &#x27;;
+
+    return prefix
+        + lines.join(splitter) + &#x27;\n&#x27;
+        + nodes.map(function (node, ix) {
+            var last = ix === nodes.length - 1;
+            var more = node.nodes &#x26;&#x26; node.nodes.length;
+            var prefix_ = prefix + (last ? &#x27; &#x27; : chr(&#x27;│&#x27;)) + &#x27; &#x27;;
+
+            return prefix
+                + (last ? chr(&#x27;└&#x27;) : chr(&#x27;├&#x27;)) + chr(&#x27;─&#x27;)
+                + (more ? chr(&#x27;┬&#x27;) : chr(&#x27;─&#x27;)) + &#x27; &#x27;
+                + archy(node, prefix_, opts).slice(prefix.length + 2)
+            ;
+        }).join(&#x27;&#x27;)
+    ;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.archy.toString" id="apidoc.element.archy.toString">
+        function <span class="apidocSignatureSpan">archy.</span>toString
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">toString = function () {
+    return text;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.archy.toString" id="apidoc.module.archy.toString">module archy.toString</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.archy.toString.toString" id="apidoc.element.archy.toString.toString">
+        function <span class="apidocSignatureSpan">archy.</span>toString
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function toString() { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
 
 </div>
 
