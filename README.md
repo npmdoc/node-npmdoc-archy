@@ -1,6 +1,7 @@
 # npmdoc-archy
 
-api documentation for  [archy (v1.0.0)](https://github.com/substack/node-archy)  [![npm package](https://img.shields.io/npm/v/npmdoc-archy.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-archy) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-archy.svg)](https://travis-ci.org/npmdoc/node-npmdoc-archy)
+#### basic api documentation for  [archy (v1.0.0)](https://github.com/substack/node-archy)  [![npm package](https://img.shields.io/npm/v/npmdoc-archy.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-archy) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-archy.svg)](https://travis-ci.org/npmdoc/node-npmdoc-archy)
+
 #### render nested hierarchies `npm ls` style with unicode pipes
 
 [![NPM](https://nodei.co/npm/archy.png?downloads=true&downloadRank=true&stars=true)](https://www.npmjs.com/package/archy)
@@ -87,7 +88,8 @@ api documentation for  [archy (v1.0.0)](https://github.com/substack/node-archy) 
             ]
         }
     },
-    "version": "1.0.0"
+    "version": "1.0.0",
+    "bin": {}
 }
 ```
 
